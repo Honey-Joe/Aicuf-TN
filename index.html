@@ -1,117 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>AICUF | TAMINNADU</title>
-  </head>
-  <body>
-    <!-- navbar starting  -->
-    <nav class="bg-white shadow-md w-full">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <img
-              src="./assets/images/aicuf-logo.webp"
-              alt="AICUF Logo"
-              class="w-[70px]"
-            />
-          </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="./index.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >HOME</a
-            >
-            <a
-              href="#"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >ABOUT US</a
-            >
-            <a
-              href="#"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONSTITUTION</a
-            >
-            <a
-              href="./report.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >REPORT</a
-            >
-            <a
-              href="./unit.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >UNIT</a
-            >
-            <a
-              href="./contact.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >GALLERY</a
-            >
-            <a
-              href="./contact.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONTACT</a
-            >
-          </div>
-          <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-black focus:outline-none">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="./index.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >HOME</a
-        >
-        <a href="" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >ABOUT US</a
-        >
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONSTITUTION</a
-        >
-        <a
-          href="./report.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >REPORT</a
-        >
-        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >UNIT</a
-        >
-        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >GALLERY</a
-        >
-        <a
-          href="./contact.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONTACT</a
-        >
-      </div>
-    </nav>
-    <!-- navbar ending  -->
+    <title>AICUF | TAMIL NADU</title>
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
 
-    <!-- footer starting  -->
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="./assets/images/aicuf-logo.webp" alt="AICUF Logo" class="w-[70px]" />
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors">HOME</a>
+                    <a href="#" class="font-[font-[Roboto]] text-sm border-b-2 border-transparent hover:border-black transition-colors">ABOUT US</a>
+                    <a href="#" class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors">CONSTITUTION</a>
+                    <a href="./report.html" class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors">REPORT</a>
+                    <a href="./unit.html" class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors">UNIT</a>
+                    <a href="./contact.html" class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors">GALLERY</a>
+                    <a href="./contact.html" class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Carousel) -->
+    <div class="relative w-full mx-auto">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative">
+                    <img src="assets/images/slider_1.webp" class="w-full h-96 object-cover" alt="Slide 1">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
+                        <h2 class="text-2xl font-bold font-[Roboto]">"We Were Born Into An Unjust Society"</h2>
+                        <p class="text-lg font-[Roboto]">AICUF Towards Hope-Filled Future</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative">
+                    <img src="assets/images/slider_2.webp" class="w-full h-96 object-cover" alt="Slide 2">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
+                        <h2 class="text-2xl font-bold font-[Roboto]">"Creating a Just and Fulfilled Future"</h2>
+                        <p class="text-lg font-[Roboto]">Empowering Youth for Change</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide relative">
+                    <img src="assets/images/slider_3.webp" class="w-full h-96 object-cover" alt="Slide 3">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
+                        <h2 class="text-2xl font-bold font-[Roboto]">"Together for a Better Society"</h2>
+                        <p class="text-lg font-[Roboto]">Join Us in the Movement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="bg-[#350D1A] text-center py-4 relative">
-      <p class="text-white text-sm">
-        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
-      </p>
+        <p class="text-white text-sm">© 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED</p>
     </footer>
-    <!-- footer ending  -->
-    <script src="./script.js"></script>
-  </body>
+
+    <!-- Swiper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                pagination: { el: ".swiper-pagination", clickable: true },
+                navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            });
+        });
+    </script>
+
+</body>
 </html>
