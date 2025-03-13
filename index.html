@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <title>AICUF | TAMINNADU</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="icon" href="./assets/images/aicuf-logo.webp">
   </head>
   <body>
     <!-- navbar starting  -->
@@ -21,37 +25,37 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="./index.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >HOME</a
             >
             <a
               href="#"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >ABOUT US</a
             >
             <a
               href="#"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >CONSTITUTION</a
             >
             <a
               href="./report.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >REPORT</a
             >
             <a
               href="./unit.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >UNIT</a
             >
             <a
-              href="./contact.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              href="#gallery"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >GALLERY</a
             >
             <a
               href="./contact.html"
-              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
               >CONTACT</a
             >
           </div>
@@ -93,7 +97,7 @@
         <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
           >UNIT</a
         >
-        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
+        <a href="#gallery" class="block px-4 py-2 text-sm hover:bg-gray-200"
           >GALLERY</a
         >
         <a
@@ -105,9 +109,66 @@
     </nav>
     <!-- navbar ending  -->
 
+
+    <!-- swiper starting -->
+     <div class="bg-gray-100 flex justify-center items-center min-h-screen">
+        <div class="w-full max-w-6xl px-4">
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm">INSPIRING AICUF CHIEFS</h2>
+                        <img src="./assets/images/Slider-1.webp" alt="Fr. Paul" class="mt-4 w-full rounded-md">
+                        <h3 class="text-lg font-bold mt-2">Fr. Paul De La Guerviere</h3>
+                        <p class="text-gray-600 text-sm mt-1">He founded one of the most crucial inventions of AICUF - Documentation Centre (DC) at the National Secretariat in Chennai.</p>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm">INSPIRING AICUF CHIEFS</h2>
+                        <img src="./assets/images/Slider-2.webp" alt="Fr. Claude" class="mt-4 w-full rounded-md">
+                        <h3 class="text-lg font-bold mt-2">Fr. Claude D’Souza</h3>
+                        <p class="text-gray-600 text-sm mt-1">A visionary who took the ideological foundation of the movement to another level of social awareness and critical thinking.</p>
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm">INSPIRING AICUF CHIEFS</h2>
+                        <img src="./assets/images/Slider-3.webp" alt="Fr. Manuel" class="mt-4 w-full rounded-md">
+                        <h3 class="text-lg font-bold mt-2">Fr. Manuel Alphonse</h3>
+                        <p class="text-gray-600 text-sm mt-1">Fr. Manu introduced critical social analysis, outreach camps, and perspectives of marginalized groups into AICUF’s framework.</p>
+                    </div>
+                    <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm">INSPIRING AICUF CHIEFS</h2>
+                        <img src="./assets/images/Slider-1.webp" alt="Fr. Paul" class="mt-4 w-full rounded-md">
+                        <h3 class="text-lg font-bold mt-2">Fr. Paul De La Guerviere</h3>
+                        <p class="text-gray-600 text-sm mt-1">He founded one of the most crucial inventions of AICUF - Documentation Centre (DC) at the National Secretariat in Chennai.</p>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm">INSPIRING AICUF CHIEFS</h2>
+                        <img src="./assets/images/Slider-2.webp" alt="Fr. Claude" class="mt-4 w-full rounded-md">
+                        <h3 class="text-lg font-bold mt-2">Fr. Claude D’Souza</h3>
+                        <p class="text-gray-600 text-sm mt-1">A visionary who took the ideological foundation of the movement to another level of social awareness and critical thinking.</p>
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm">INSPIRING AICUF CHIEFS</h2>
+                        <img src="./assets/images/Slider-3.webp" alt="Fr. Manuel" class="mt-4 w-full rounded-md">
+                        <h3 class="text-lg font-bold mt-2">Fr. Manuel Alphonse</h3>
+                        <p class="text-gray-600 text-sm mt-1">Fr. Manu introduced critical social analysis, outreach camps, and perspectives of marginalized groups into AICUF’s framework.</p>
+                    </div>
+                </div>
+     </div>
+     </div>
+     </div>
+    <!-- swiper ending  -->
     <!-- footer starting  -->
     <footer class="bg-[#350D1A] text-center py-4 relative">
-      <p class="text-white text-sm">
+      <p class="text-white text-sm font-[Roboto]">
         © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
       </p>
     </footer>
