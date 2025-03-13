@@ -1,81 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Report | AICUF</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- navbar starting  -->
     <nav class="bg-white shadow-md w-full">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <img src="./assets/images/aicuf-logo.webp" alt="AICUF Logo" class="w-[70px]">
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="./index.html" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">HOME</a>
-                    <a href="#" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">ABOUT US</a>
-                    <a href="#" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">CONSTITUTION</a>
-                    <a href="./report.html" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">REPORT</a>
-                    <a href="./unit.html" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">UNIT</a>
-                    <a href="./contact.html" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">GALLERY</a>
-                    <a href="./contact.html" class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors">CONTACT</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-black focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <img
+              src="./assets/images/aicuf-logo.webp"
+              alt="AICUF Logo"
+              class="w-[70px]"
+            />
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="./index.html"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >HOME</a
+            >
+            <a
+              href="#"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >ABOUT US</a
+            >
+            <a
+              href="#"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >CONSTITUTION</a
+            >
+            <a
+              href="./report.html"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >REPORT</a
+            >
+            <a
+              href="./unit.html"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >UNIT</a
+            >
+            <a
+              href="./contact.html"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >GALLERY</a
+            >
+            <a
+              href="./contact.html"
+              class="roboto text-sm border-b-2 border-transparent hover:border-black transition-colors"
+              >CONTACT</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-black focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-            <a href="./index.html" class="block px-4 py-2 text-sm hover:bg-gray-200">HOME</a>
-            <a href="" class="block px-4 py-2 text-sm hover:bg-gray-200">ABOUT US</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">CONSTITUTION</a>
-            <a href="./report.html" class="block px-4 py-2 text-sm hover:bg-gray-200">REPORT</a>
-            <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200">UNIT</a>
-            <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200">GALLERY</a>
-            <a href="./contact.html" class="block px-4 py-2 text-sm hover:bg-gray-200">CONTACT</a>
-        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a href="./index.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >HOME</a
+        >
+        <a href="" class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >ABOUT US</a
+        >
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >CONSTITUTION</a
+        >
+        <a
+          href="./report.html"
+          class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >REPORT</a
+        >
+        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >UNIT</a
+        >
+        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >GALLERY</a
+        >
+        <a
+          href="./contact.html"
+          class="block px-4 py-2 text-sm hover:bg-gray-200"
+          >CONTACT</a
+        >
+      </div>
     </nav>
     <!-- navbar ending  -->
     <!-- report sectio starting  -->
-     <div>
-        <!-- Report Section -->
-    <section class="max-w-6xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg h-screen">
+    <div>
+      <!-- Report Section -->
+      <section
+        class="max-w-6xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg h-screen"
+      >
         <div class="grid md:grid-cols-3 gap-6">
-            <!-- PDF Preview Section -->
-            <div class="md:col-span-2 border rounded-lg overflow-hidden h-screen bg-gray-200 flex items-center justify-center">
-                <iframe id="pdfViewer" src="" class="w-full h-screen hidden"></iframe>
-                <p id="placeholderText" class="text-gray-500">Click a year to preview the report</p>
-            </div>
+          <!-- PDF Preview Section -->
+          <div
+            class="md:col-span-2 border rounded-lg overflow-hidden h-screen bg-gray-200 flex items-center justify-center"
+          >
+            <iframe
+              id="pdfViewer"
+              src=""
+              class="w-full h-screen hidden"
+            ></iframe>
+            <p id="placeholderText" class="text-gray-500">
+              Click a year to preview the report
+            </p>
+          </div>
 
-            <!-- Year List -->
-            <div>
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Select a Year</h2>
-                <ul class="space-y-2">
-                    <li><button onclick="showPDF('./assets/reports/2024.pdf')" class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md">2024 Report</button></li>
-                    <li><button onclick="showPDF('reports/2023.pdf')" class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md">2023 Report</button></li>
-                    <li><button onclick="showPDF('reports/2022.pdf')" class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md">2022 Report</button></li>
-                    <li><button onclick="showPDF('reports/2021.pdf')" class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md">2021 Report</button></li>
-                </ul>
-            </div>
+          <!-- Year List -->
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+              Select a Year
+            </h2>
+            <ul class="space-y-2">
+              <li>
+                <button
+                  onclick="showPDF('./assets/reports/2024.pdf')"
+                  class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md"
+                >
+                  2024 Report
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="showPDF('reports/2023.pdf')"
+                  class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md"
+                >
+                  2023 Report
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="showPDF('reports/2022.pdf')"
+                  class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md"
+                >
+                  2022 Report
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="showPDF('reports/2021.pdf')"
+                  class="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md"
+                >
+                  2021 Report
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
-     </div>
-     <!-- report section ending  -->
+      </section>
+    </div>
+    <!-- report section ending  -->
 
     <!-- footer starting  -->
     <footer class="bg-[#350D1A] text-center py-4 relative">
-        <p class="text-white text-sm">
-            © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
-        </p>
+      <p class="text-white text-sm">
+        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
+      </p>
     </footer>
     <!-- footer ending  -->
-   <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
