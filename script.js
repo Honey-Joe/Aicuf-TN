@@ -11,3 +11,6 @@ const menuBtn = document.getElementById('menu-btn');
             document.getElementById('pdfViewer').classList.remove('hidden');
             document.getElementById('placeholderText').classList.add('hidden');
         }
+       
+
+       
