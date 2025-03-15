@@ -12,106 +12,69 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <style>
+    .nav-link {
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+  
+    .nav-link:hover {
+        border-bottom-color: black;
+    }
+  
+    .mobile-link {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        transition: background 0.3s ease;
+    }
+  
+    .mobile-link:hover {
+        background: #f3f3f3;
+    }
+  </style>
   <body>
     <!-- Navbar -->
-    <nav class="bg-white shadow-md w-full">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <img
-              src="./assets/images/aicuf-logo.webp"
-              alt="AICUF Logo"
-              class="w-[70px]"
-            />
+    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div class="flex justify-between items-center">
+              <img src="./assets/images/aicuf-logo.webp" alt="AICUF Logo" class="w-[60px]">
+              <!-- Desktop Menu -->
+              <div class="hidden md:flex items-center space-x-8">
+                  <a href="./index.html" class="nav-link">HOME</a>
+                  <a href="./aboutus.html" class="nav-link">ABOUT US</a>
+                  <a href="./Constitution.html" class="nav-link">CONSTITUTION</a>
+                  <a href="./report.html" class="nav-link">REPORT</a>
+                  <a href="./unit.html" class="nav-link">UNIT</a>
+                  <a href="./gallery.html" class="nav-link">GALLERY</a>
+                  <a href="./contact.html" class="nav-link">CONTACT</a>
+              </div>
+              <!-- Mobile Menu Button -->
+              <button id="menu-btn" class="text-black md:hidden focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
           </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="./index.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >HOME</a
-            >
-            <a
-              href="./src/aboutus.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >ABOUT US</a
-            >
-            <a
-              href="./src/Constitution.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONSTITUTION</a
-            >
-            <a
-              href="./report.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >REPORT</a
-            >
-            <a
-              href="./unit.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >UNIT</a
-            >
-            <a
-              href="#gallery"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >GALLERY</a
-            >
-            <a
-              href="./contact.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONTACT</a
-            >
-          </div>
-          <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-black focus:outline-none">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="./index.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >HOME</a
-        >
-        <a href="./src/aboutus.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >ABOUT US</a
-        >
-        <a href="./src/Constitution.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONSTITUTION</a
-        >
-        <a
-          href="./report.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >REPORT</a
-        >
-        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >UNIT</a
-        >
-        <a href="#gallery" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >GALLERY</a
-        >
-        <a
-          href="./contact.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONTACT</a
-        >
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full">
+          <a href="./index.html" class="mobile-link">HOME</a>
+          <a href="./aboutus.html" class="mobile-link">ABOUT US</a>
+          <a href="./Constitution.html" class="mobile-link">CONSTITUTION</a>
+          <a href="./report.html" class="mobile-link">REPORT</a>
+          <a href="./unit.html" class="mobile-link">UNIT</a>
+          <a href="./gallery.html" class="mobile-link">GALLERY</a>
+          <a href="./contact.html" class="mobile-link">CONTACT</a>
       </div>
-    </nav>
+  </nav>
 
     <!-- Hero Section (Carousel) -->
-    <div class="relative w-full mx-auto">
+    <div class="relative w-full mx-auto py-20">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
@@ -170,167 +133,49 @@
         <div class="swiper-pagination"></div>
 
         <!-- Navigation Buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+       
       </div>
     </div>
-    <!-- model component  starting -->
-    <div class="container mx-auto px-4 py-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <!-- Card 1 -->
-            <div class="bg-white p-6 shadow-md rounded-md flex flex-col items-start justify-start text-center">
-                <h3 class="font-bold text-lg">NAME AND NATURE</h3>
-                <button class="mt-4 bg-black text-white p-1 rounded-full">
-                    <span class="text-xl">→</span>
-                </button>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white p-6 shadow-md rounded-md flex flex-col items-start justify-start text-center">
-                <h3 class="font-bold text-lg">PREAMBLE</h3>
-                <button class="mt-4 bg-black text-white p-1 rounded-full">
-                    <span class="text-xl">→</span>
-                </button>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white p-6 shadow-md rounded-md flex flex-col items-start justify-start text-center">
-                <h3 class="font-bold text-lg">AIMS AND OBJECTIVE</h3>
-                <button class="mt-4 bg-black text-white p-1 rounded-full">
-                    <span class="text-xl">→</span>
-                </button>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white p-6 shadow-md rounded-md flex flex-col items-start justify-start text-center">
-                <h3 class="font-bold text-lg">CENTENARY CELEBRATION</h3>
-                <button class="mt-4 bg-black text-white p-1 rounded-full">
-                    <span class="text-xl">→</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <!-- model component ending  -->
+    
     <!-- swiper starting -->
     <div class="bg-gray-100 flex justify-center items-center min-h-screen">
       <div class="w-full max-w-6xl px-4">
         <!-- Swiper Container -->
         <div class="swiper mySwiper2">
-          <div class="swiper-wrapper">
+          <div class="grid grid-cols-2">
             <!-- Slide 1 -->
-            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
               <h2
                 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm"
               >
                 INSPIRING AICUF CHIEFS
               </h2>
               <img
-                src="./assets/images/Slider-1.webp"
+                src="./assets/images/1.png"
                 alt="Fr. Paul"
-                class="mt-4 w-full rounded-md"
+                class="mt-4 rounded-md w-[60%]"
               />
-              <h3 class="text-lg font-bold mt-2">Fr. Paul De La Guerviere</h3>
-              <p class="text-gray-600 text-sm mt-1">
-                He founded one of the most crucial inventions of AICUF -
-                Documentation Centre (DC) at the National Secretariat in
-                Chennai.
-              </p>
+              <h3 class="text-lg font-bold mt-2">Fr. Carty SJ</h3>
+              
             </div>
 
             <!-- Slide 2 -->
-            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
+            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
               <h2
                 class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm"
               >
                 INSPIRING AICUF CHIEFS
               </h2>
               <img
-                src="./assets/images/Slider-2.webp"
+                src="./assets/images/2.png"
                 alt="Fr. Claude"
-                class="mt-4 w-full rounded-md"
+                class="mt-4 w-[60%] rounded-md"
               />
-              <h3 class="text-lg font-bold mt-2">Fr. Claude D’Souza</h3>
-              <p class="text-gray-600 text-sm mt-1">
-                A visionary who took the ideological foundation of the movement
-                to another level of social awareness and critical thinking.
-              </p>
+              <h3 class="text-lg font-bold mt-2">Fr. Ceyrac SJ</h3>
+              
             </div>
 
-            <!-- Slide 3 -->
-            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
-              <h2
-                class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm"
-              >
-                INSPIRING AICUF CHIEFS
-              </h2>
-              <img
-                src="./assets/images/Slider-3.webp"
-                alt="Fr. Manuel"
-                class="mt-4 w-full rounded-md"
-              />
-              <h3 class="text-lg font-bold mt-2">Fr. Manuel Alphonse</h3>
-              <p class="text-gray-600 text-sm mt-1">
-                Fr. Manu introduced critical social analysis, outreach camps,
-                and perspectives of marginalized groups into AICUF’s framework.
-              </p>
-            </div>
-
-            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
-              <h2
-                class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm"
-              >
-                INSPIRING AICUF CHIEFS
-              </h2>
-              <img
-                src="./assets/images/Slider-1.webp"
-                alt="Fr. Paul"
-                class="mt-4 w-full rounded-md"
-              />
-              <h3 class="text-lg font-bold mt-2">Fr. Paul De La Guerviere</h3>
-              <p class="text-gray-600 text-sm mt-1">
-                He founded one of the most crucial inventions of AICUF -
-                Documentation Centre (DC) at the National Secretariat in
-                Chennai.
-              </p>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
-              <h2
-                class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm"
-              >
-                INSPIRING AICUF CHIEFS
-              </h2>
-              <img
-                src="./assets/images/Slider-2.webp"
-                alt="Fr. Claude"
-                class="mt-4 w-full rounded-md"
-              />
-              <h3 class="text-lg font-bold mt-2">Fr. Claude D’Souza</h3>
-              <p class="text-gray-600 text-sm mt-1">
-                A visionary who took the ideological foundation of the movement
-                to another level of social awareness and critical thinking.
-              </p>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide bg-white rounded-lg shadow-lg p-6">
-              <h2
-                class="bg-indigo-700 text-white px-4 py-1 inline-block rounded-md text-sm"
-              >
-                INSPIRING AICUF CHIEFS
-              </h2>
-              <img
-                src="./assets/images/Slider-3.webp"
-                alt="Fr. Manuel"
-                class="mt-4 w-full rounded-md"
-              />
-              <h3 class="text-lg font-bold mt-2">Fr. Manuel Alphonse</h3>
-              <p class="text-gray-600 text-sm mt-1">
-                Fr. Manu introduced critical social analysis, outreach camps,
-                and perspectives of marginalized groups into AICUF’s framework.
-              </p>
-            </div>
+           
           </div>
 
           <!-- Navigation Buttons -->
@@ -341,7 +186,7 @@
     <!-- footer starting  -->
     <footer class="bg-[#350D1A] text-center py-4 relative">
       <p class="text-white text-sm font-[Roboto]">
-        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
+        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | TAMILNADU | ALL RIGHTS RESERVED
       </p>
     </footer>
 

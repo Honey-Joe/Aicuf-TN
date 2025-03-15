@@ -8,188 +8,155 @@
     <link rel="icon" href="./assets/images/aicuf-logo.webp">
     <title>UNIT| AICUF</title>
   </head>
+  <style>
+    .nav-link {
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+  
+    .nav-link:hover {
+        border-bottom-color: black;
+    }
+  
+    .mobile-link {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        transition: background 0.3s ease;
+    }
+  
+    .mobile-link:hover {
+        background: #f3f3f3;
+    }
+  </style>
   <body>
     <!-- navbar starting  -->
     <!-- navbar starting  -->
-    <nav class="bg-white shadow-md w-full">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <img
-              src="./assets/images/aicuf-logo.webp"
-              alt="AICUF Logo"
-              class="w-[70px]"
-            />
+    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div class="flex justify-between items-center">
+              <img src="./assets/images/aicuf-logo.webp" alt="AICUF Logo" class="w-[60px]">
+              <!-- Desktop Menu -->
+              <div class="hidden md:flex items-center space-x-8">
+                  <a href="./index.html" class="nav-link">HOME</a>
+                  <a href="./aboutus.html" class="nav-link">ABOUT US</a>
+                  <a href="./Constitution.html" class="nav-link">CONSTITUTION</a>
+                  <a href="./report.html" class="nav-link">REPORT</a>
+                  <a href="./unit.html" class="nav-link">UNIT</a>
+                  <a href="./gallery.html" class="nav-link">GALLERY</a>
+                  <a href="./contact.html" class="nav-link">CONTACT</a>
+              </div>
+              <!-- Mobile Menu Button -->
+              <button id="menu-btn" class="text-black md:hidden focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
           </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="./index.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >HOME</a
-            >
-            <a
-              href="#"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >ABOUT US</a
-            >
-            <a
-              href="#"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONSTITUTION</a
-            >
-            <a
-              href="./report.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >REPORT</a
-            >
-            <a
-              href="./unit.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >UNIT</a
-            >
-            <a
-              href="#gallery"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >GALLERY</a
-            >
-            <a
-              href="./contact.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONTACT</a
-            >
-          </div>
-          <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-black focus:outline-none">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="./index.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >HOME</a
-        >
-        <a href="" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >ABOUT US</a
-        >
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONSTITUTION</a
-        >
-        <a
-          href="./report.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >REPORT</a
-        >
-        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >UNIT</a
-        >
-        <a href="#gallery" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >GALLERY</a
-        >
-        <a
-          href="./contact.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONTACT</a
-        >
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full">
+          <a href="./index.html" class="mobile-link">HOME</a>
+          <a href="./aboutus.html" class="mobile-link">ABOUT US</a>
+          <a href="./Constitution.html" class="mobile-link">CONSTITUTION</a>
+          <a href="./report.html" class="mobile-link">REPORT</a>
+          <a href="./unit.html" class="mobile-link">UNIT</a>
+          <a href="./gallery.html" class="mobile-link">GALLERY</a>
+          <a href="./contact.html" class="mobile-link">CONTACT</a>
       </div>
-    </nav>
+  </nav>
     <!-- navbar ending  -->
-    <!-- unit section starting  -->
-    <section>
-      <div>
-        <!-- Units Section -->
-        <section class="max-w-6xl mx-auto mt-10 p-6 h-screen">
-          <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">
-            Our Active Units
-          </h2>
-  
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Unit Card -->
-            <div class="bg-white p-4 shadow-lg rounded-lg">
-              <h3 class="text-xl font-semibold text-[#350D1A]">
-                St. Joseph's College, Trichy
-              </h3>
-              <p class="text-gray-600 mt-2">
-                One of the oldest AICUF units in Tamil Nadu, promoting
-                leadership and social service.
-              </p>
-            </div>
-  
-            <div class="bg-white p-4 shadow-lg rounded-lg">
-              <h3 class="text-xl font-semibold text-[#350D1A]">
-                Loyola College, Chennai
-              </h3>
-              <p class="text-gray-600 mt-2">
-                A hub for student activism and community engagement in the heart
-                of Chennai.
-              </p>
-            </div>
-  
-            <div class="bg-white p-4 shadow-lg rounded-lg">
-              <h3 class="text-xl font-semibold text-[#350D1A]">
-                Arul Anandar College, Madurai
-              </h3>
-              <p class="text-gray-600 mt-2">
-                Focusing on rural development and student empowerment through
-                AICUF programs.
-              </p>
-            </div>
-  
-            <div class="bg-white p-4 shadow-lg rounded-lg">
-              <h3 class="text-xl font-semibold text-[#350D1A]">
-                St. Xavier’s College, Palayamkottai
-              </h3>
-              <p class="text-gray-600 mt-2">
-                Active in student welfare, education, and social outreach
-                initiatives.
-              </p>
-            </div>
-  
-            <div class="bg-white p-4 shadow-lg rounded-lg">
-              <h3 class="text-xl font-semibold text-[#350D1A]">
-                Sacred Heart College, Tirupattur
-              </h3>
-              <p class="text-gray-600 mt-2">
-                Known for its strong student participation in AICUF movements
-                and activities.
-              </p>
-            </div>
-  
-            <div class="bg-white p-4 shadow-lg rounded-lg">
-              <h3 class="text-xl font-semibold text-[#350D1A]">
-                Stella Maris College, Chennai
-              </h3>
-              <p class="text-gray-600 mt-2">
-                Encourages student leadership, social awareness, and
-                empowerment.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
+     <!-- header starting  -->
+    <!-- header starting  -->
+    <section
+    class="relative bg-cover bg-center h-fit flex items-center justify-center bg-[url(./assets/images/slider_1.webp)] py-48"
+    
+    >
+    <div class="absolute inset-0 bg-black/50"></div>
+    
+    <div class="relative z-10 text-white text-center px-6">
+      <h1 class="text-4xl font-[Roboto]">Units</h1>
     </section>
+   <!-- header ending  -->
+     <!-- header ending  -->
+    <!-- unit section starting  -->
+    <section class="w-[90%] lg:w-[80%] mx-auto py-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Unit Cards -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#350D1A] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#350D1A]">St. Josephs’ College, Trichy</h3>
+              <p class="text-gray-600 mt-2">A legacy of leadership and community service.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#6A1B4D] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#6A1B4D]">Holy Cross College, Trichy</h3>
+              <p class="text-gray-600 mt-2">Promoting social activism and empowerment.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#A83279] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#A83279]">Servite College of Arts and Science for Women, Thogaimalai</h3>
+              <p class="text-gray-600 mt-2">Empowering women through education and service.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#D72638] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#D72638]">Annai Velankanni College of Arts and Science, Tanjore</h3>
+              <p class="text-gray-600 mt-2">Fostering leadership and community engagement.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#FFD700] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#FFD700]">Bon Secours College for Women, Tanjore</h3>
+              <p class="text-gray-600 mt-2">A hub for student activism and service.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#0077B6] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#0077B6]">Sacred Heart College of Arts & Science, Dindigul</h3>
+              <p class="text-gray-600 mt-2">Encouraging innovation and leadership.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00A896] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#00A896]">St. Xavier’s College, Palayamkottai</h3>
+              <p class="text-gray-600 mt-2">A commitment to excellence and service.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#FF5733] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#FF5733]">Idhaya College for Women, Sarugani</h3>
+              <p class="text-gray-600 mt-2">Empowering young minds through education.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#6A0572] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#6A0572]">Mary Matha College, Periyakulam</h3>
+              <p class="text-gray-600 mt-2">Building leadership and service culture.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#2196F3] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#2196F3]">St. Jerome’s College, Nagercoil</h3>
+              <p class="text-gray-600 mt-2">Empowering students for social change.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#C70039] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#C70039]">Don Bosco College, Tuticorin</h3>
+              <p class="text-gray-600 mt-2">Developing leaders through education.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#4CAF50] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <h3 class="text-xl font-semibold text-[#4CAF50]">Fatima College, Madurai</h3>
+              <p class="text-gray-600 mt-2">Inspiring students to lead with purpose.</p>
+          </div>
+      </div>
+  </section>
     <!-- unit section ending  -->
 
     <!-- footer starting  -->
     <footer class="bg-[#350D1A] text-center py-4 relative">
       <p class="text-white text-sm font-[Roboto]">
-        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
+        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | TAMILNADU | ALL RIGHTS RESERVED
       </p>
     </footer>
     <!-- footer ending  -->
-    <script src="./script.js"></script>
   </body>
+  <script src="./script.js"></script>
 </html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  .nav-link {
+      font-family: 'Roboto', sans-serif;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+      border-bottom-color: black;
+  }
+
+  .mobile-link {
+      display: block;
+      padding: 10px;
+      font-size: 16px;
+      text-align: center;
+      transition: background 0.3s ease;
+  }
+
+  .mobile-link:hover {
+      background: #f3f3f3;
+  }
+</style>
+<body class="w-[100%] mx-auto">
+  <h1 class="text-3xl font-bold underline">
+  </h1>
+  <!-- Navbar -->
+  
+  <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex justify-between items-center">
+            <img src="./assets/images/aicuf-logo.webp" alt="AICUF Logo" class="w-[60px]">
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./aboutus.html" class="nav-link">ABOUT US</a>
+                <a href="./Constitution.html" class="nav-link">CONSTITUTION</a>
+                <a href="./report.html" class="nav-link">REPORT</a>
+                <a href="./unit.html" class="nav-link">UNIT</a>
+                <a href="./gallery.html" class="nav-link">GALLERY</a>
+                <a href="./contact.html" class="nav-link">CONTACT</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="text-black md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full">
+        <a href="./index.html" class="mobile-link">HOME</a>
+        <a href="./aboutus.html" class="mobile-link">ABOUT US</a>
+        <a href="./Constitution.html" class="mobile-link">CONSTITUTION</a>
+        <a href="./report.html" class="mobile-link">REPORT</a>
+        <a href="./unit.html" class="mobile-link">UNIT</a>
+        <a href="./gallery.html" class="mobile-link">GALLERY</a>
+        <a href="./contact.html" class="mobile-link">CONTACT</a>
+    </div>
+</nav>
+  <!-- header page starting  -->
+<section
+  class="relative bg-cover bg-center h-fit flex items-center justify-center bg-[url(./assets/images/slider_1.webp)] py-48"
+  
+>
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <div class="relative z-10 text-white text-center px-6">
+    <h1 class="text-4xl font-[Roboto]">About US</h1>
+</section>
+  <!-- header page ending  -->
+  <section class="md:flex  mx-auto w-[95%] lg:w-[80%] py-10">
+    <div class="md:w-[50%] p-5">
+        <center><h2 class="text-2xl font-bold pb-2 ">Welcome to the Movement</h2></center>
+        <p class="pb-2 font-[Roboto] text-justify">AICUF, as the only Catholic University students Movement Marching Towards its Centenary with the Motto of “Doing Truth in Charity” as visualized and established by Fr. Carty S.J, the founder of the movement at St. Joseph’s College, Trichy, Premises in 1924, we are called to “See, Judge and Act” according to the present changing times in the world and in our country. As we are celebrating our centenary with a vision and mission of “Marching with marginalized with critical Social awareness and political alertness to make a difference” that would instil hope in all to work towards building a “Better Human World”. In the words of Fr. Claude D’Souza S.J, one of the long time national Director of AICUF Movement, AICUFers are called to be the “Prophets of the 21 st Century and Harbingers of Hope” , to the unjust society in which we are born. Despite the challenging times let all AICUFers, advisors, animator, and all people of good will, who want to make a difference and become an agent of social change of our times, let’s together march forward with determination and courage to realize that,
+            “We were born into an unjust society and we are determined not to leave it as we have found it”</p>
+        <img src="../assets/images/a1.webp" alt="">
+    </div>
+    <div class="md:w-[50%] p-5">
+        <center><h2 class="text-2xl font-bold pb-2">Let us Introduce Ourselves</h2></center>
+        <p class="pb-7  font-[Roboto] text-justify">
+            AICUF had its humble beginning in 1924 at St. Joseph’s College, Trichy, when a group of college students joined together under the banner of the Catholic Young Men’s Guild (CYMG) to deepen the faith, to find its intellectual dimension and to be its witness.
+            “The Rally” Magazine which was started as the organ of the CYMG has now turned out to be the forum for university students to examine society and its system and subsystems critically.
+            AICUF stands for the service and emancipation of women and men as a movement of, for, by, and with university students. It develops leaders who will serve and struggle for the liberation of all women and men, regardless of race or ethnicity. Linked by a vision of society in which every man is free to live a full human existence free of all forms of exploitation, AICUF seeks to contribute to the creation of a BETTER WORLD in which core values such as truth, human dignity, social justice, and peace prevail, and democracy is a way of life for al
+        </p>
+            <img src="../assets/images/a3.webp" alt="">
+        
+    </div>
+  </section>
+ 
+  <footer class="bg-[#350D1A] text-center py-4 relative">
+    <p class="text-white text-sm font-[Roboto]">
+      © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | TAMILNADU | ALL RIGHTS RESERVED
+    </p>
+  </footer>
+</body>
+<script src="./script.js"></script>
+</html>

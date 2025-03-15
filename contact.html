@@ -8,169 +8,112 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./assets/images/aicuf-logo.webp">
   </head>
+  <style>
+    .nav-link {
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+  
+    .nav-link:hover {
+        border-bottom-color: black;
+    }
+  
+    .mobile-link {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        transition: background 0.3s ease;
+    }
+  
+    .mobile-link:hover {
+        background: #f3f3f3;
+    }
+  </style>
   <body class="bg-gray-100">
     <!-- navbar starting  -->
     <!-- navbar starting  -->
-    <nav class="bg-white shadow-md w-full">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <img
-              src="./assets/images/aicuf-logo.webp"
-              alt="AICUF Logo"
-              class="w-[70px]"
-            />
+    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div class="flex justify-between items-center">
+              <img src="./assets/images/aicuf-logo.webp" alt="AICUF Logo" class="w-[60px]">
+              <!-- Desktop Menu -->
+              <div class="hidden md:flex items-center space-x-8">
+                  <a href="./index.html" class="nav-link">HOME</a>
+                  <a href="./aboutus.html" class="nav-link">ABOUT US</a>
+                  <a href="./Constitution.html" class="nav-link">CONSTITUTION</a>
+                  <a href="./report.html" class="nav-link">REPORT</a>
+                  <a href="./unit.html" class="nav-link">UNIT</a>
+                  <a href="./gallery.html" class="nav-link">GALLERY</a>
+                  <a href="./contact.html" class="nav-link">CONTACT</a>
+              </div>
+              <!-- Mobile Menu Button -->
+              <button id="menu-btn" class="text-black md:hidden focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
           </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="./index.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >HOME</a
-            >
-            <a
-              href="#"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >ABOUT US</a
-            >
-            <a
-              href="#"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONSTITUTION</a
-            >
-            <a
-              href="./report.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >REPORT</a
-            >
-            <a
-              href="./unit.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >UNIT</a
-            >
-            <a
-              href="#gallery"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >GALLERY</a
-            >
-            <a
-              href="./contact.html"
-              class="font-[Roboto] text-sm border-b-2 border-transparent hover:border-black transition-colors"
-              >CONTACT</a
-            >
-          </div>
-          <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-black focus:outline-none">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="./index.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >HOME</a
-        >
-        <a href="" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >ABOUT US</a
-        >
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONSTITUTION</a
-        >
-        <a
-          href="./report.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >REPORT</a
-        >
-        <a href="./unit.html" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >UNIT</a
-        >
-        <a href="#gallery" class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >GALLERY</a
-        >
-        <a
-          href="./contact.html"
-          class="block px-4 py-2 text-sm hover:bg-gray-200"
-          >CONTACT</a
-        >
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full">
+          <a href="./index.html" class="mobile-link">HOME</a>
+          <a href="./aboutus.html" class="mobile-link">ABOUT US</a>
+          <a href="./Constitution.html" class="mobile-link">CONSTITUTION</a>
+          <a href="./report.html" class="mobile-link">REPORT</a>
+          <a href="./unit.html" class="mobile-link">UNIT</a>
+          <a href="./gallery.html" class="mobile-link">GALLERY</a>
+          <a href="./contact.html" class="mobile-link">CONTACT</a>
       </div>
-    </nav>
+  </nav>
     <!-- navbar ending  -->
 
+      <!-- header strating  -->
+<!-- header starting  -->
+<section
+class="relative bg-cover bg-center h-fit flex items-center justify-center bg-[url(./assets/images/slider_1.webp)] py-48"
+
+>
+<div class="absolute inset-0 bg-black/50"></div>
+
+<div class="relative z-10 text-white text-center px-6">
+  <h1 class="text-4xl font-[Roboto]">Contact</h1>
+</section>
+<!-- header ending  -->
+      <!-- header ending  -->
     <!-- contact section strating -->
 
     <div>
-      <!-- Header -->
-      <header class="bg-[#350D1A] text-white text-center py-4">
-        <h1 class="text-2xl font-bold">Contact Us</h1>
-      </header>
+    
 
       <!-- Contact Section -->
       <section
-        class="max-w-4xl mx-auto bg-white shadow-lg p-6 mt-10 rounded-lg"
+        class="mx-auto bg-white shadow-lg py-10 rounded-lg grid grid-cols-1 lg:grid-cols-2 gap-10"
       >
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
-        <p class="text-gray-600 mb-6">
-          Feel free to reach out to us. We'd love to hear from you!
-        </p>
+        
 
-        <form class="space-y-4">
-          <div>
-            <label class="block text-gray-700 font-medium">Your Name</label>
-            <input
-              type="text"
-              class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your name"
-            />
-          </div>
-          <div>
-            <label class="block text-gray-700 font-medium">Your Email</label>
-            <input
-              type="email"
-              class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
-            />
-          </div>
-          <div>
-            <label class="block text-gray-700 font-medium">Message</label>
-            <textarea
-              class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              rows="4"
-              placeholder="Write your message here..."
-            ></textarea>
-          </div>
-          <button
-            class="bg-[#350D1A] text-white px-6 py-2 rounded-md hover:bg-red-800 transition"
-          >
-            Send Message
-          </button>
-        </form>
+        <section class="max-w-4xl mx-auto mt-10 text-gray-800 ">
+          <h3 class="text-xl font-semibold">Contact Information</h3>
+          <p class="mt-2">📍 Address: AICUF House, Trichy, India</p>
+          <p>📞 Phone: +91 98765 43210</p>
+          <p>📧 Email: contact@aicuf.in</p>
+        </section>
+        <section>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7613599086503!2d78.68974821016607!3d10.829565889277909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5892b5ed461%3A0x23992c5c469ac168!2sSt.%20Joseph&#39;s%20College!5e0!3m2!1sen!2sin!4v1741926314406!5m2!1sen!2sin" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="lg:w-[600px] w-[90%] mx-auto"></iframe>
+        </section>
       </section>
 
       <!-- Contact Details -->
-      <section class="max-w-4xl mx-auto mt-10 text-gray-800 text-center">
-        <h3 class="text-xl font-semibold">Contact Information</h3>
-        <p class="mt-2">📍 Address: AICUF House, Chennai, India</p>
-        <p>📞 Phone: +91 98765 43210</p>
-        <p>📧 Email: contact@aicuf.in</p>
-      </section>
+      
     </div>
     <!-- contact scetion ending  -->
     <!-- footer starting  -->
     <footer class="bg-[#350D1A] text-center py-4 relative">
       <p class="text-white text-sm font-[Roboto]">
-        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | ALL RIGHTS RESERVED
+        © 2024 ALL INDIA CATHOLIC UNIVERSITY FEDERATION | TAMILNADU | ALL RIGHTS RESERVED
       </p>
     </footer>
     
